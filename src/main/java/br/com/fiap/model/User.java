@@ -2,16 +2,27 @@ package br.com.fiap.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class User {
-	
-	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String name = "emanuelle";
 	private String username = "emanuelle";
 	private String email = "emanuelle@gmail.com";
 	private LocalDate birthday =  LocalDate.of(1989, 9, 14);
 	private String password = "ffff23e";
 	
-	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}

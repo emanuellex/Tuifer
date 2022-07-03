@@ -5,33 +5,9 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 
-<h:head></h:head>
-<body>
-	<div class="card">
+<ui:composition template="/_template.xhtml">
+	<ui:define name="content">
 		<h:form>
-			<p:tabMenu activeIndex="#{param.i}">
-				<p:menuitem value="Home" icon="pi pi-fw pi-home">
-					<f:param name="i" value="0" />
-				</p:menuitem>
-				<p:menuitem value="Explore" icon="pi pi-fw pi-hashtag">
-					<f:param name="i" value="1" />
-				</p:menuitem>
-				<p:menuitem value="Notifications" icon="pi pi-fw pi-bell">
-					<f:param name="i" value="2" />
-				</p:menuitem>
-				<p:menuitem value="Messages" icon="pi pi-fw pi-envelope">
-					<f:param name="i" value="4" />
-				</p:menuitem>
-				<p:menuitem value="Bookmarks" icon="pi pi-fw pi-bookmark">
-					<f:param name="i" value="4" />
-				</p:menuitem>
-				<p:menuitem value="Profile" icon="pi pi-fw pi-user">
-					<f:param name="i" value="4" />
-				</p:menuitem>
-			</p:tabMenu>
-		</h:form>
-	</div>
-	<h:form>
 		<p:card style="width: 25em; margin: 1em auto">
 			<f:facet name="title">
         New Account
@@ -74,5 +50,7 @@
 			</f:facet>
 		</p:card>
 	</h:form>
-</body>
+	</ui:define>
+</ui:composition>
+	
 </html>
